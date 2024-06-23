@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 /* reset */
 * {
     margin: 0;
@@ -20,6 +22,16 @@ img {
     margin: 0 auto;
 }
 
+.logo h1, .jsSpan {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.interface .jsSpan{
+    color: rgba(127, 179, 213, 0.580);
+}
+
 .flex {
     display: flex;
 }
@@ -28,9 +40,9 @@ img {
     padding: 10px 40px;
     font-size: 18px;
     font-weight: 600;
-    background-color: aquamarine;
+    background-color: #7FB3D5;
     border: 0;
-    border-radius: 30px;
+    border-radius: 8px;
     cursor: pointer;
     transition: .2s;
 }
@@ -42,7 +54,7 @@ h2.titulo {
 }
 
 h2.titulo span {
-    color: aquamarine;
+    color: #7FB3D5;
 }
 
 /* header */
@@ -83,7 +95,7 @@ div .btn-abrir-menu {
 }
 
 .btn-abrir-menu i {
-    color: aquamarine;
+    color: #7FB3D5;
     font-size: 40px;
 }
 
@@ -112,7 +124,7 @@ div .btn-abrir-menu {
 }
 
 .menu-mobile .btn-fechar i {
-    color: aquamarine;
+    color: #7FB3D5;
     font-size: 40px;
 }
 
@@ -129,7 +141,7 @@ div .btn-abrir-menu {
 }
 
 .menu-mobile nav ul li a:hover {
-    background-color: aquamarine;
+    background-color: #7FB3D5;
     color: #000;
 }
 
@@ -146,9 +158,10 @@ div .btn-abrir-menu {
 
 button:hover,
 form .btn-enviar input:hover {
-    background: linear-gradient(to left, gray, white);
-    box-shadow: 0px 0px 8px aqua;
+    background: transparent;
     transform: scale(1.05);
+    border: solid 1px #7FB3D5;
+    color: #fff;
 }
 
 /* main */
@@ -162,35 +175,27 @@ section.topo-do-site .flex {
     gap: 98px;
 }
 
-.topo-do-site h1 {
-    color: #fff;
-    font-size: 42px;
+.topo-do-site .title {
+    color: #c8c8c8;
+    font-size: 35px;
     align-items: 40px;
 }
 
 .topo-do-site .txt-topo-site h1 span {
-    color: aquamarine;
-    font-size: 80px;
+    color: #7FB3D5;
 }
 
+/* Estilizando todos os parágrafos dentro de .txt-topo-site */
 .topo-do-site .txt-topo-site p {
-    color: #fff;
-    margin: 40px 0;
+    color: #9ca3af;
+    margin: 20px 0;
+    font-weight: 300;
 }
 
 .topo-do-site .img-topo-site img {
     position: relative;
-    animation: flutuar 2s ease-in-out infinite alternate;
-}
-
-@keyframes flutuar {
-    0% {
-        top: 0;
-    }
-
-    100% {
-        top: 30px;
-    }
+    border-radius: 40%;
+    mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.272));
 }
 
 section.especialidades {
@@ -216,7 +221,7 @@ section.especialidades .flex {
 
 .especialidades .especialidades-box i {
     font-size: 70px;
-    color: aquamarine;
+    color: #7FB3D5;
 }
 
 .especialidades .especialidades-box h3 {
@@ -245,7 +250,7 @@ section.sobre .flex {
 }
 
 .sobre .txt-sobre h2 span {
-    color: aquamarine;
+    color: #7FB3D5;
     display: block;
 }
 
@@ -259,11 +264,21 @@ section.sobre .flex {
     height: 60px;
     border-radius: 50%;
     border: none;
-    background-color: aquamarine;
+    background-color: transparent;
+    color: #fff;
+    border: solid 1px #7FB3D5;
     font-size: 22px;
     cursor: pointer;
     margin: 0 8px;
     transition: .2s;
+}
+
+.btn-social button:hover {
+    background: #7FB3D5;
+    transform: scale(1.05);
+    border: solid 1px #7FB3D5;
+    color: black;
+    box-shadow: 0px 1px 8px 0px #7FB3D5;
 }
 
 /* Portifólio */
@@ -352,7 +367,7 @@ form .btn-enviar {
 
 form .btn-enviar input {
     width: 129px;
-    background-color: aquamarine;
+    background-color: #7FB3D5;
     color: #000;
     font-weight: 700;
     cursor: pointer;
@@ -374,11 +389,18 @@ footer .line-footer {
 }
 
 .borda {
-    border-top: 2px solid aquamarine;
+    border-top: 2px solid #7FB3D5;
+}
+
+.interface .logo-footer h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #7d7d7d;
 }
 
 footer .line-footer p i {
-    color: aquamarine;
+    color: #7FB3D5;
     font-size: 22px;
 }
 
@@ -414,7 +436,14 @@ footer .line-footer p a {
     }
 
     .topo-do-site h1 {
-        font-size: 30px;
+        font-size: 1.5rem;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .topo-do-site p {
+        padding-top: 13px;
+        text-align: center;
     }
 
     .topo-do-site .img-topo-site img {
