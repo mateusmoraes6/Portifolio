@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-
 /* reset */
 * {
     margin: 0;
@@ -13,6 +11,10 @@ body {
     height: 100vh;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 img {
     width: 20em;
 }
@@ -22,14 +24,9 @@ img {
     margin: 0 auto;
 }
 
-.logo h1, .jsSpan {
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.interface .jsSpan{
-    color: rgba(127, 179, 213, 0.580);
+.poweredby-header img {
+    width: 70px;
+    border-radius: 8px;
 }
 
 .flex {
@@ -55,6 +52,10 @@ h2.titulo {
 
 h2.titulo span {
     color: #7FB3D5;
+}
+
+.formulario h2 {
+    margin-bottom: 20px;
 }
 
 /* header */
@@ -177,7 +178,7 @@ section.topo-do-site .flex {
 
 .topo-do-site .title {
     color: #c8c8c8;
-    font-size: 35px;
+    font-size: 26px;
     align-items: 40px;
 }
 
@@ -212,11 +213,13 @@ section.especialidades .flex {
     border-radius: 20px;
     margin-top: 45px;
     transition: .2s;
+    box-shadow: 0 0 15px #ffffff78;
+
 }
 
 .especialidades .especialidades-box:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px #ffffff78;
+    box-shadow: 0 0 15px #7FB3D5;
 }
 
 .especialidades .especialidades-box i {
@@ -240,7 +243,7 @@ section.sobre .flex {
 }
 
 .sobre .txt-sobre {
-    color: #fff;
+    color: #c8c8c8;
 }
 
 .sobre .txt-sobre h2 {
@@ -392,13 +395,6 @@ footer .line-footer {
     border-top: 2px solid #7FB3D5;
 }
 
-.interface .logo-footer h1 {
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #7d7d7d;
-}
-
 footer .line-footer p i {
     color: #7FB3D5;
     font-size: 22px;
@@ -406,6 +402,55 @@ footer .line-footer p i {
 
 footer .line-footer p a {
     color: #fff;
+}
+
+.grid-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.poweredby {
+    display: flex;
+    align-items: center;
+}
+
+.poweredby p {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.poweredby img {
+    width: 50px; 
+    height: auto; 
+    border-radius: 8px;
+}
+
+.copyright {
+    color: #fff;
+    font-size: 14px;
+}
+
+.line-footer .copyright a {
+    color: #7FB3D5;
+    font-weight: 500;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px; 
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; 
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #7FB3D5; 
+    border-radius: 10px; 
 }
 
 @media screen and (max-width: 1028px) {
@@ -435,8 +480,8 @@ footer .line-footer p a {
         padding: 20px 8%;
     }
 
-    .topo-do-site h1 {
-        font-size: 1.5rem;
+    .topo-do-site .title {
+        font-size: 25px;
         margin: 10px 0;
         text-align: center;
     }
@@ -502,5 +547,9 @@ footer .line-footer p a {
 
     footer .line-footer {
         text-align: center;
+    }
+
+    footer .poweredby {
+        display: none;
     }
 }
