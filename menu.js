@@ -22,3 +22,10 @@ function closePopup(projectId) {
     document.getElementById('popup' + projectId).style.display = 'none';
 }
 
+document.querySelectorAll('.popup').forEach(popup => {
+    popup.addEventListener('click', function(event) {
+        if (event.target === popup) {
+            popup.style.display = 'none';
+        }
+    });
+});
