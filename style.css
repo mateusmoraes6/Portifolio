@@ -9,6 +9,7 @@
 body {
     background-color: #000;
     height: 100vh;
+    padding-top: 150px;
 }
 
 html {
@@ -60,7 +61,13 @@ h2.titulo span {
 
 /* header */
 header {
-    padding: 40px 4%;
+    padding: 10px 5.8%;
+    background-color: #000;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    position: fixed;
 }
 
 header>.interface {
@@ -284,8 +291,67 @@ section.sobre .flex {
     box-shadow: 0px 1px 8px 0px #7FB3D5;
 }
 
+/* Linguagens */
+.scroller {
+    position: relative;
+    left: 280px;
+    bottom: 76px;
+    display: flex;
+    margin: 0 auto;
+    width: 400px;
+    overflow: hidden;
+    mask: linear-gradient(90deg, transparent, #000, #000, transparent, transparent);
+}
+
+.scroller div {
+    white-space: nowrap;
+    animation: animate var(--t) linear infinite;
+    animation-delay: calc(var(--t) * -1);
+}
+
+.scroller div:nth-child(2) {
+    animation: animate2 var(--t) linear infinite;
+    animation-delay: calc(var(--t) / -2);
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(105%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateX(5%);
+    }
+
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+.scroller div span {
+    display: inline-flex;
+    width: 40px;
+    margin: 7px;
+    padding: 5px 5px;
+    letter-spacing: 0.2em;
+    border: 1px solid #7FB3D5;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.scroller div span:hover {
+    background: black;
+    cursor: pointer;
+}
+
 /* Portifólio */
-section.portifolio {
+/* section.portifolio {
     padding: 80px 4%;
     box-shadow: 0 0 40px 10px #ffffff1d;
 }
@@ -308,7 +374,113 @@ section.portifolio .flex {
 
 .img-port:hover {
     background-position: 100% 100%;
+} */
+.title_portifolio {
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
 }
+
+.title_portifolio span {
+    color: #7FB3D5;
+}
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project {
+    width: 30%;
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px 1px #ffffff78;
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+    transition: .2s;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project h3, p {
+    padding: 6px;
+}
+
+.project p {
+    color: #e6e6e6;
+    line-height: 1.40em;
+    font-weight: 300;
+    font-size: 15px;
+    font-style: normal;
+    flex-grow: 1;
+}
+
+.project .detalhes {
+    margin: 12px;
+    padding: 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: #7FB3D5;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.project:hover {
+    box-shadow: 0 0 15px #7FB3D5
+}
+
+.project .detalhes:hover {
+    background-color: #7FB3D5;
+    border: none;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* Detalhes Pop Up */
+/* Pop-up oculto inicialmente */
+.popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Conteúdo do pop-up */
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 60%;
+    text-align: center;
+    position: relative;
+}
+
+/* Botão de fechar */
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Estilizando o conteúdo */
+.popup-content h3 {
+    margin-top: 0;
+    color: #333;
+}
+
 
 .overlay {
     position: absolute;
@@ -379,6 +551,7 @@ form .btn-enviar input {
 
 /* Footer */
 footer {
+    margin-top: 50px;
     padding: 40px 4%;
     box-shadow: 0 0 40px 10px #ffffff1d;
 }
@@ -422,8 +595,8 @@ footer .line-footer p a {
 }
 
 .poweredby img {
-    width: 50px; 
-    height: auto; 
+    width: 50px;
+    height: auto;
     border-radius: 8px;
 }
 
@@ -439,18 +612,18 @@ footer .line-footer p a {
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-    width: 8px; 
+    width: 8px;
     height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: transparent; 
-    border-radius: 10px; 
+    background: transparent;
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #7FB3D5; 
-    border-radius: 10px; 
+    background: #7FB3D5;
+    border-radius: 10px;
 }
 
 @media screen and (max-width: 1028px) {
@@ -510,6 +683,11 @@ footer .line-footer p a {
         padding: 80px 8%;
     }
 
+    .sobre .txt-sobre p {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     .sobre .txt-sobre h2 {
         font-size: 34px;
         line-height: 35px;
@@ -524,8 +702,15 @@ footer .line-footer p a {
         width: 100%;
     }
 
+    /* Linguagens */
+    .scroller {
+        position: relative;
+        top: 30px;
+        left: 50px;
+    }
+
     /* Portifolio */
-    section.portifolio {
+    /* section.portifolio {
         padding: 80px 8%;
     }
 
@@ -537,6 +722,10 @@ footer .line-footer p a {
 
     section.portifolio .flex {
         gap: 60px;
+    } */
+
+    .project {
+        width: 45%;
     }
 
     /* Footer */
@@ -551,5 +740,9 @@ footer .line-footer p a {
 
     footer .poweredby {
         display: none;
+    }
+
+    footer .copyright {
+        margin: 0 auto;
     }
 }

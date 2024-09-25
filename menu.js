@@ -13,3 +13,12 @@ menu.addEventListener('click', ()=>{
 overlay.addEventListener('click', ()=>{
     menu.classList.add('abrir-menu')
 })
+
+function openPopup(projectId) {
+    document.getElementById('popup' + projectId).style.display = 'flex';
+}
+
+function closePopup(projectId) {
+    document.getElementById('popup' + projectId).style.display = 'none';
+}
+
