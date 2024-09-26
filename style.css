@@ -20,11 +20,12 @@ img {
     width: 20em;
 }
 
-html, body {
+html,
+body {
     overflow-x: hidden;
 }
 
-
+/* Classes gerais */
 .interface {
     max-width: 1200px;
     margin: 0 auto;
@@ -381,7 +382,7 @@ section.portifolio .flex {
     background-position: 100% 100%;
 } */
 .title_portifolio {
-    font-size: 30px;
+    font-size: 25px;
     text-align: center;
     color: #fff;
 }
@@ -413,7 +414,8 @@ section.portifolio .flex {
     border-radius: 8px;
 }
 
-.project h3, p {
+.project h3,
+p {
     padding: 6px;
 }
 
@@ -492,6 +494,18 @@ section.portifolio .flex {
     color: #333;
 }
 
+.popup-content .icons {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.popup-content span {
+    width: 36px;
+    display: flex;
+    justify-content: center;
+}
+
 .popup-content a {
     text-decoration: none;
 }
@@ -507,7 +521,7 @@ section.portifolio .flex {
 }
 
 .popup-content .btn:hover {
-    background-color: #3333330e; 
+    background-color: #3333330e;
     color: #000;
     border: solid 1px #000;
     box-shadow: 0px 0px 8px #000;
@@ -742,26 +756,13 @@ footer .line-footer p a {
     }
 
     /* Portifolio */
-    /* .project {
-        width: 100%;
-    } */
-
-    /* section.portifolio {
-        padding: 80px 8%;
-    }
-
-    .img-port {
-        width: 100%;
-        max-width: 360px;
-        margin: 0 auto;
-    }
-
-    section.portifolio .flex {
-        gap: 60px;
-    } */
-
     .project {
         width: 45%;
+    }
+
+    .popup .close {
+        top: -4px;
+        right: 3px;
     }
 
     /* Footer */
@@ -787,5 +788,17 @@ footer .line-footer p a {
 
     .project {
         width: 100%;
+    }
+
+    .popup-content {
+        width: 87%;
+        max-height: 70vh;
+        overflow-y: auto;
+        padding-right: 15px;
+    }
+
+    .popup .close {
+        top: -4px;
+        right: 3px;
     }
 }
