@@ -109,6 +109,7 @@ div .btn-abrir-menu {
 }
 
 .btn-abrir-menu i {
+    display: flex;
     color: #7FB3D5;
     font-size: 40px;
 }
@@ -263,6 +264,7 @@ section.sobre .flex {
     font-size: 40px;
     line-height: 40px;
     margin-bottom: 38px;
+    padding-left: 4px;
 }
 
 .sobre .txt-sobre h2 span {
@@ -786,13 +788,21 @@ footer .line-footer p a {
 
 @media screen and (max-width: 576px) {
 
+    .poweredby-header img {
+        width: 55px;
+    }
+
+    .sobre .txt-sobre p {
+        margin: 20px;
+    }
+
     .project {
         width: 100%;
     }
 
     .popup-content {
         width: 87%;
-        max-height: 70vh;
+        max-height: 65vh;
         overflow-y: auto;
         padding-right: 15px;
     }
